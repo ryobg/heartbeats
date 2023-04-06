@@ -1,0 +1,6 @@
+<fitContributions>
+    <fitField 
+        id = "0" displayInChart = "false" sortOrder = "0" precision="0"
+        dataLabel = "@Strings.fitrec_label" 
+        unitLabel = "@Strings.fitrec_unit"/>
+</fitContributions>

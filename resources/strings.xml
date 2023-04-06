@@ -1,0 +1,5 @@
+<strings>
+    <string id = "AppName">HeartBeats</string>
+    <string id = "fitrec_label">Heart Beat Intervals</string>
+    <string id = "fitrec_unit">ms</string>
+</strings>

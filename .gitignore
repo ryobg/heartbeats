@@ -1,0 +1,5 @@
+out/
+bin/
+parsing/*.fit
+#parsing/*.json
+#parsing/*.csv
