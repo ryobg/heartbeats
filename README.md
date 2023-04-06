@@ -21,5 +21,5 @@ The API and Device must be configured for whatever is the watch.
 Need to `pip install pytz tzlocal garmin_fit_sdk`.
 
 ## References
-https://developer.garmin.com/connect-iq/overview/
-https://developer.garmin.com/connect-iq/api-docs/index.html
+* https://developer.garmin.com/connect-iq/overview/
+* https://developer.garmin.com/connect-iq/api-docs/index.html
