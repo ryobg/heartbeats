@@ -35,8 +35,8 @@ class HeartBeatsView extends WatchUi.View
         dc.setColor (Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
 
         draw_h -= font_height;
-        var minutes = seconds / 60;
-        var hours = minutes / 60;
+        var minutes = (seconds / 60) % 60;
+        var hours = (seconds / 3600);
         var sec = seconds % 60;
         //var str = Lang.format ("$1$:$2$:$3$", [hours, minutes, sec]);
         var str = hours.format ("%02d") + ":" + minutes.format ("%02d") + ":" + sec.format ("%02d");
