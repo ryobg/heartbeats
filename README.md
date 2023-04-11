@@ -1,9 +1,14 @@
 # HeartBeats
 
-A Garmin's SDK application for smart watch Fenix 5x+, probably compatible and with others, but untested. It starts to log heart intervals, in milliseconds, as soon as it starts. It shows the seconds passed and the amount of records collected so far. 
+A Garmin's SDK application for smart watch Fenix 5x+, probably compatible and with others, but untested. It starts to 
+log heart intervals, in milliseconds, as soon as it starts. It shows the seconds passed and the amount of records 
+collected so far. 
 
-Includes a parsing/ python to extract a JSON (full) and CSV (just the heart beat intervals). When
-ran, that file parses all `*.fit` files in its directory.
+Includes a parsing/ python to extract a JSON (full) and CSV (just the heart beat intervals). When ran, that file parses 
+all `*.fit` files in its directory. A `current.csv` is generated for fixed reference by other tools, like the Jupyter
+notebook provided.
+
+The IPython book provided, demonstrates general analysis on the exported data. Tested with Anaconda.
 
 ## Requirements
 
@@ -18,7 +23,7 @@ The API and Device must be configured for whatever is the watch.
 
 ## Requirements Python
 
-Need to `pip install pytz tzlocal garmin_fit_sdk`.
+Need to `pip install pytz tzlocal garmin_fit_sdk systole`.
 
 ## References
 * https://developer.garmin.com/connect-iq/overview/
