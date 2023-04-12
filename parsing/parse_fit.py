@@ -92,10 +92,10 @@ def correct_intervals (records):
     '''
 
     ibi = numpy.array (records['interbeat_intervals'], dtype = numpy.float64)
-    ibi = ibi[ibi > 10]
+    ibi = ibi[(ibi > 10) & (ibi < 2000)]
 
     # Simple clean for the most obvious artifacts
-    records['simple'] = [int (v) for v in ibi[ibi < 1800].tolist ()]
+    records['simple'] = [int (v) for v in ibi[ibi < 1700].tolist ()]
     print ("Simple clean removed %d intervals." % (len (records['interbeat_intervals']) - len (records['simple'])))
 
     # Recreate a new IBI time series that does not contain irregular intervals.
