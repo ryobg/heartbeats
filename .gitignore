@@ -4,3 +4,4 @@ parsing/*.fit
 parsing/*.json
 parsing/*.csv
 parsing/*.html
+parsing/archive

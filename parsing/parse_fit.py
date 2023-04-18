@@ -29,17 +29,18 @@ def main ():
         with open (source_file[:-4] + '.json', 'w') as f:
             f.writelines (json.dumps (messages, indent = 4, default = str))
 
-        size = ibi_records_size (messages['record_mesgs'])
-        print ("Amount of records: " + str (size))
-        if size < 1:
-            continue
-
         try:
+            size = ibi_records_size (messages['record_mesgs'])
+            print ("Amount of records: " + str (size))
+            if size < 1:
+                continue
+
             records = extract_records (messages['record_mesgs'])
             records = correct_intervals (records)
             target_file = source_file[:-4] + '.csv'
             write_to_csv (target_file, records)
             shutil.copy (target_file, "current.csv")
+
         except Exception as e:
             print ("Error: " + "".join (TracebackException.from_exception (e).format ()))
             continue
